@@ -12,8 +12,11 @@ def register(request):
         password2 = request.POST['password2']
         email = request.POST['email']
         if len(username) == 0:
-            messages.info(request, 'Ingrese un nombre valido  ')
-            return redirect('register') 
+            messages.info(request, 'Ingrese un nombre valido (no vacio) ')
+            return redirect('register')
+        elif len(email) == 0:
+            messages.info(request, 'Ingrese un email valido  (no vacio) ')
+            return redirect('register')  
         elif password1 == password2:
             if User.objects.filter(username=username).exists():
                 messages.info(request,'usuario ya registrado')
