@@ -92,28 +92,15 @@
               {% csrf_token %}
               <div class="php-email-form">
                 <div class="row gy-4">
-                  <div class="col-lg-4 col-md-6">
-                    <input type="text" name="first_name" class="form-control" data-rule="minlen:1" placeholder="Nombre"  >
-                  </div>
-                  <div class="col-lg-4 col-md-6">
-                    <input type="text" name="last_name" class="form-control"  data-rule="minlen:1" placeholder="Apellido"  >
-                  </div>
 
                   <div class="col-lg-4 col-md-6">
                     <input type="text" name="username" class="form-control" id="date" data-rule="minlen:1" placeholder="Nombre de Usuario"  >
                   </div>
-
-
-                  <div class="col-lg-4 col-md-6">
-                    <input type="email" class="form-control" name="email" data-rule="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email">
-                  </div>
                   
                   <div class="col-lg-4 col-md-6">
-                    <input type="password" class="form-control" name="password1" data-rule="minlen:1" placeholder="Contraseña"  >
+                    <input type="password" class="form-control" name="password" data-rule="minlen:1" placeholder="Contraseña"  >
                   </div>
-                  <div class="col-lg-4 col-md-6">
-                    <input type="password" class="form-control" name="password2" placeholder="Confirmar Contraseña" >
-                  </div>
+
                 </div>
               </div>
               <div class="book-a-table " style="font-weight: 600;background: #df1529; color:white ;text-align:center">
@@ -122,7 +109,7 @@
                   {% endfor %}
               </div>
                 <div class="php-email-form button">
-                  <div class="text-center"><button type="submit" >Crear Usuario</button></div>
+                  <div class="text-center"><button type="submit" >Login</button></div>
                 </div>
             </form>
           </div><!-- End Reservation Form -->
